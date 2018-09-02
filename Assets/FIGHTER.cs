@@ -37,6 +37,27 @@ public class FIGHTER : MonoBehaviour {
         {
             animator.SetTrigger("PUNCH_L");
         }
-              
-	}
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            animator.SetBool("WALK_BACK", true);
+
+        }
+        else
+        {
+            animator.SetBool("WALK_BACK", false);
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            animator.SetTrigger("KICK_R");
+        }
+        if (Input.GetAxis("Vertical") > 0.1)
+        {
+            animator.SetBool("JUMP", true);
+
+        }
+        else
+        {
+            animator.SetBool("JUMP", false);
+        }
+    }
 }
