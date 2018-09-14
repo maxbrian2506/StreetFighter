@@ -14,6 +14,7 @@ public class FIGHTER : MonoBehaviour {
     [SerializeField] string FighterName;
     protected Animator animator;
     private Rigidbody MyBody;
+    public FighterStates currentStates = FighterStates.IDLE;
 
 	// Use this for initialization
 	void Start ()
@@ -58,6 +59,22 @@ public class FIGHTER : MonoBehaviour {
         else
         {
             animator.SetBool("JUMP", false);
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            animator.SetBool("DEFEND",true);
+        }
+        else
+        {
+            animator.SetBool("DEFEND", false);
+        }
+
+    }
+    public Rigidbody body
+    {
+        get
+        {
+            return this.MyBody;
         }
     }
 }

@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -250,12 +251,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: -0.00024895326, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.82, y: -0.19, z: -7.6}
+  m_LocalPosition: {x: 10.82, y: -0.19, z: -11.7}
   m_LocalScale: {x: 0.5110196, y: 1.01, z: 0.736896}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.029000001, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b5e1c9983f67408689bb35cbc460e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftTarget: {fileID: 616138407}
+  rightTarget: {fileID: 1600461706}
+  minDistance: 7
 --- !u!1 &616138403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100168, guid: c1db8e3d5f882944b8c6e36f6de7b687,
@@ -275,6 +290,7 @@ MonoBehaviour:
   Player: 0
   health: 100
   FighterName: 
+  currentStates: 0
 --- !u!54 &616138405
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -290,6 +306,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!4 &616138407 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400168, guid: c1db8e3d5f882944b8c6e36f6de7b687,
+    type: 3}
+  m_PrefabInternal: {fileID: 731918578}
 --- !u!136 &616138408
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -495,6 +516,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca8c9fe98ea224547a606393a5a0a833, type: 3}
   m_IsPrefabAsset: 0
+--- !u!4 &1600461706 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400140, guid: ca8c9fe98ea224547a606393a5a0a833,
+    type: 3}
+  m_PrefabInternal: {fileID: 851876969}
 --- !u!1 &1861038854
 GameObject:
   m_ObjectHideFlags: 0
